@@ -21,7 +21,7 @@ RUN apt-get -qq update && \
       unzip \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN --output-document=android-sdk.zip https://dl.google.com/android/repository/tools_r${ANDROID_SDK_TOOLS}-linux.zip && \
+RUN wget --output-document=android-sdk.zip https://dl.google.com/android/repository/tools_r${ANDROID_SDK_TOOLS}-linux.zip && \
     unzip android-sdk.zip -d /android-sdk-linux && \
     rm -v /android-sdk.zip
 
