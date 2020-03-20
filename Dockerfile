@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:14
 
 ENV DEBIAN_FRONTEND noninteractive
 
